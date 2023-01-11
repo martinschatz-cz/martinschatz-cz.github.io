@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Introduction/readme.html">
-   Intro to Python
+   MB100T01 Advanced Image Analysis Course
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -408,12 +408,95 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-univariate-histograms">
+   Plotting univariate histograms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditioning-on-other-variables">
+   Conditioning on other variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalized-histogram-statistics">
+   Normalized histogram statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kernel-density-estimation">
+   Kernel density estimation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#choosing-the-smoothing-bandwidth">
+     Choosing the smoothing bandwidth
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Conditioning on other variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-density-estimation-pitfalls">
+     Kernel density estimation pitfalls
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#empirical-cumulative-distributions">
+   Empirical cumulative distributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-bivariate-distributions">
+   Visualizing bivariate distributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribution-visualization-in-other-settings">
+   Distribution visualization in other settings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-joint-and-marginal-distributions">
+     Plotting joint and marginal distributions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-many-distributions">
+     Plotting many distributions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -425,6 +508,78 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-univariate-histograms">
+   Plotting univariate histograms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditioning-on-other-variables">
+   Conditioning on other variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalized-histogram-statistics">
+   Normalized histogram statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kernel-density-estimation">
+   Kernel density estimation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#choosing-the-smoothing-bandwidth">
+     Choosing the smoothing bandwidth
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Conditioning on other variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel-density-estimation-pitfalls">
+     Kernel density estimation pitfalls
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#empirical-cumulative-distributions">
+   Empirical cumulative distributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-bivariate-distributions">
+   Visualizing bivariate distributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribution-visualization-in-other-settings">
+   Distribution visualization in other settings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-joint-and-marginal-distributions">
+     Plotting joint and marginal distributions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-many-distributions">
+     Plotting many distributions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -452,6 +607,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<section id="plotting-univariate-histograms">
+<h2>Plotting univariate histograms<a class="headerlink" href="#plotting-univariate-histograms" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<p>Perhaps the most common approach to visualizing a distribution is the <em>histogram</em>. This is the default approach in :func:<code class="docutils literal notranslate"><span class="pre">displot</span></code>, which uses the same underlying code as :func:<code class="docutils literal notranslate"><span class="pre">histplot</span></code>. A histogram is a bar plot where the axis representing the data variable is divided into a set of discrete bins and the count of observations falling within each bin is shown using the height of the corresponding bar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">penguins</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;penguins&quot;</span><span class="p">)</span>
@@ -460,12 +619,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2912a1390&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec36f96390&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_4_1.png" src="../_images/04_seaborn_distributions_4_1.png" />
 </div>
 </div>
+<p>This plot immediately affords a few insights about the <code class="docutils literal notranslate"><span class="pre">flipper_length_mm</span></code> variable. For instance, we can see that the most common flipper length is about 195 mm, but the distribution appears bimodal, so this one number does not represent the data well.</p>
+<p>###Choosing the bin size</p>
+<p>The size of the bins is an important parameter, and using the wrong bin size can mislead by obscuring important features of the data or by creating apparent features out of random variability. By default, :func:<code class="docutils literal notranslate"><span class="pre">displot</span></code>/:func:<code class="docutils literal notranslate"><span class="pre">histplot</span></code> choose a default bin size based on the variance of the data and the number of observations. But you should not be over-reliant on such automatic approaches, because they depend on particular assumptions about the structure of your data. It is always advisable to check that your impressions of the distribution are consistent across different bin sizes. To choose the size directly, set the <code class="docutils literal notranslate"><span class="pre">binwidth</span></code> parameter:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">binwidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -473,12 +635,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e291117890&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1846ce10&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_6_1.png" src="../_images/04_seaborn_distributions_6_1.png" />
 </div>
 </div>
+<p>In other circumstances, it may make more sense to specify the <em>number</em> of bins, rather than their size:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
@@ -486,12 +649,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e293446510&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1a5d2a10&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_8_1.png" src="../_images/04_seaborn_distributions_8_1.png" />
 </div>
 </div>
+<p>One example of a situation where defaults fail is when the variable takes a relatively small number of integer values. In that case, the default bin width may be too small, creating awkward gaps in the distribution:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
@@ -500,12 +664,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2934e6890&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec184aac10&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_10_1.png" src="../_images/04_seaborn_distributions_10_1.png" />
 </div>
 </div>
+<p>One approach would be to specify the precise bin breaks by passing an array to <code class="docutils literal notranslate"><span class="pre">bins</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
@@ -513,12 +678,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e293554250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1a6f84d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_12_1.png" src="../_images/04_seaborn_distributions_12_1.png" />
 </div>
 </div>
+<p>This can also be accomplished by setting <code class="docutils literal notranslate"><span class="pre">discrete=True</span></code>, which chooses bin breaks that represent the unique values in a dataset with bars that are centered on their corresponding value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;size&quot;</span><span class="p">,</span> <span class="n">discrete</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -526,12 +692,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2945b97d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1b76cf50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_14_1.png" src="../_images/04_seaborn_distributions_14_1.png" />
 </div>
 </div>
+<p>It’s also possible to visualize the distribution of a categorical variable using the logic of a histogram. Discrete bins are automatically set for categorical variables, but it may also be helpful to “shrink” the bars slightly to emphasize the categorical nature of the axis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">.8</span><span class="p">)</span>
@@ -539,12 +706,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294643a50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec18440750&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_16_1.png" src="../_images/04_seaborn_distributions_16_1.png" />
 </div>
 </div>
+</section>
+<section id="conditioning-on-other-variables">
+<h2>Conditioning on other variables<a class="headerlink" href="#conditioning-on-other-variables" title="Permalink to this headline">#</a></h2>
+<p>Once you understand the distribution of a variable, the next step is often to ask whether features of that distribution differ across other variables in the dataset. For example, what accounts for the bimodal distribution of flipper lengths that we saw above? :func:<code class="docutils literal notranslate"><span class="pre">displot</span></code> and :func:<code class="docutils literal notranslate"><span class="pre">histplot</span></code> provide support for conditional subsetting via the <code class="docutils literal notranslate"><span class="pre">hue</span></code> semantic. Assigning a variable to <code class="docutils literal notranslate"><span class="pre">hue</span></code> will draw a separate histogram for each of its unique values and distinguish them by color:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
@@ -552,12 +723,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294655a90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1b874590&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_18_1.png" src="../_images/04_seaborn_distributions_18_1.png" />
 </div>
 </div>
+<p>By default, the different histograms are “layered” on top of each other and, in some cases, they may be difficult to distinguish. One option is to change the visual representation of the histogram from a bar plot to a “step” plot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">)</span>
@@ -565,12 +737,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2945ac290&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec184ce750&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_20_1.png" src="../_images/04_seaborn_distributions_20_1.png" />
 </div>
 </div>
+<p>Alternatively, instead of layering each bar, they can be “stacked”, or moved vertically. In this plot, the outline of the full histogram will match the plot with only a single variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="s2">&quot;stack&quot;</span><span class="p">)</span>
@@ -582,12 +755,13 @@ title="Print to PDF"
   baselines.iloc[:, cols] = (curves
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2945ee190&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1b9cc410&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_22_2.png" src="../_images/04_seaborn_distributions_22_2.png" />
 </div>
 </div>
+<p>The stacked histogram emphasizes the part-whole relationship between the variables, but it can obscure other features (for example, it is difficult to determine the mode of the Adelie distribution. Another option is “dodge” the bars, which moves them horizontally and reduces their width. This ensures that there are no overlaps and that the bars remain comparable in terms of height. But it only works well when the categorical variable has a small number of levels:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="s2">&quot;dodge&quot;</span><span class="p">)</span>
@@ -595,12 +769,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294926390&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1b984410&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_24_1.png" src="../_images/04_seaborn_distributions_24_1.png" />
 </div>
 </div>
+<p>Because :func:<code class="docutils literal notranslate"><span class="pre">displot</span></code> is a figure-level function and is drawn onto a :class:<code class="docutils literal notranslate"><span class="pre">FacetGrid</span></code>, it is also possible to draw each individual distribution in a separate subplot by assigning the second variable to <code class="docutils literal notranslate"><span class="pre">col</span></code> or <code class="docutils literal notranslate"><span class="pre">row</span></code> rather than (or in addition to) <code class="docutils literal notranslate"><span class="pre">hue</span></code>. This represents the distribution of each subset well, but it makes it more difficult to draw direct comparisons:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;sex&quot;</span><span class="p">)</span>
@@ -608,12 +783,17 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2949341d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1b94be50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_26_1.png" src="../_images/04_seaborn_distributions_26_1.png" />
 </div>
 </div>
+<p>None of these approaches are perfect, and  we will soon see some alternatives to a histogram that are better-suited to the task of comparison.</p>
+</section>
+<section id="normalized-histogram-statistics">
+<h2>Normalized histogram statistics<a class="headerlink" href="#normalized-histogram-statistics" title="Permalink to this headline">#</a></h2>
+<p>Before we do, another point to note is that, when the subsets have unequal numbers of observations, comparing their distributions in terms of counts may not be ideal. One solution is to <em>normalize</em> the counts using the <code class="docutils literal notranslate"><span class="pre">stat</span></code> parameter:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;density&quot;</span><span class="p">)</span>
@@ -621,12 +801,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2947415d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1baea550&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_28_1.png" src="../_images/04_seaborn_distributions_28_1.png" />
 </div>
 </div>
+<p>By default, however, the normalization is applied to the entire distribution, so this simply rescales the height of the bars. By setting <code class="docutils literal notranslate"><span class="pre">common_norm=False</span></code>, each subset will be normalized independently:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;density&quot;</span><span class="p">,</span> <span class="n">common_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -634,12 +815,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294f53e50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c0fa890&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_30_1.png" src="../_images/04_seaborn_distributions_30_1.png" />
 </div>
 </div>
+<p>Density normalization scales the bars so that their <em>areas</em> sum to 1. As a result, the density axis is not directly interpretable. Another option is to normalize the bars to that their <em>heights</em> sum to 1. This makes most sense when the variable is discrete, but  it is an option for all histograms:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;probability&quot;</span><span class="p">)</span>
@@ -647,12 +829,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2945eec50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1beaa510&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_32_1.png" src="../_images/04_seaborn_distributions_32_1.png" />
 </div>
 </div>
+</section>
+<section id="kernel-density-estimation">
+<h2>Kernel density estimation<a class="headerlink" href="#kernel-density-estimation" title="Permalink to this headline">#</a></h2>
+<p>A histogram aims to approximate the underlying probability density function that generated the data by binning and counting observations. Kernel density estimation (KDE) presents a different solution to the same problem. Rather than using discrete bins, a KDE plot smooths the observations with a Gaussian kernel, producing a continuous density estimate:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">)</span>
@@ -660,12 +846,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e291304310&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c6b4410&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_34_1.png" src="../_images/04_seaborn_distributions_34_1.png" />
 </div>
 </div>
+<section id="choosing-the-smoothing-bandwidth">
+<h3>Choosing the smoothing bandwidth<a class="headerlink" href="#choosing-the-smoothing-bandwidth" title="Permalink to this headline">#</a></h3>
+<p>Much like with the bin size in the histogram, the ability of the KDE to accurately represent the data depends on the choice of smoothing bandwidth. An over-smoothed estimate might erase meaningful features, but an under-smoothed estimate can obscure the true shape within random noise. The easiest way to check the robustness of the estimate is to adjust the default bandwidth:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">bw_adjust</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
@@ -673,7 +862,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e295523990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c0c2f10&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_36_1.png" src="../_images/04_seaborn_distributions_36_1.png" />
@@ -686,12 +875,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2969723d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c792290&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_38_1.png" src="../_images/04_seaborn_distributions_38_1.png" />
 </div>
 </div>
+</section>
+<section id="id1">
+<h3>Conditioning on other variables<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>As with histograms, if you assign a <code class="docutils literal notranslate"><span class="pre">hue</span></code> variable, a separate density estimate will be computed for each level of that variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">)</span>
@@ -699,7 +892,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e296a23590&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c85fe90&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_40_1.png" src="../_images/04_seaborn_distributions_40_1.png" />
@@ -712,7 +905,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e296a011d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c7ae2d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_42_1.png" src="../_images/04_seaborn_distributions_42_1.png" />
@@ -725,12 +918,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294f0add0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1be3be50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_44_1.png" src="../_images/04_seaborn_distributions_44_1.png" />
 </div>
 </div>
+</section>
+<section id="kernel-density-estimation-pitfalls">
+<h3>Kernel density estimation pitfalls<a class="headerlink" href="#kernel-density-estimation-pitfalls" title="Permalink to this headline">#</a></h3>
+<p>KDE plots have many advantages. Important features of the data are easy to discern (central tendency, bimodality, skew), and they afford easy comparisons between subsets. But there are also situations where KDE poorly represents the underlying data. This is because the logic of KDE assumes that the underlying distribution is smooth and unbounded. One way this assumption can fail is when a variable reflects a quantity that is naturally bounded. If there are observations lying close to the bound (for example, small values of a variable that cannot be negative), the KDE curve may extend to unrealistic values:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">)</span>
@@ -738,7 +935,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294c4b910&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1fdbe890&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_46_1.png" src="../_images/04_seaborn_distributions_46_1.png" />
@@ -751,7 +948,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e298fbb990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec2017ff50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_48_1.png" src="../_images/04_seaborn_distributions_48_1.png" />
@@ -765,7 +962,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e298f67210&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c7b6390&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_50_1.png" src="../_images/04_seaborn_distributions_50_1.png" />
@@ -778,7 +975,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e299013f90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1fe35b90&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_52_1.png" src="../_images/04_seaborn_distributions_52_1.png" />
@@ -791,12 +988,17 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29a676f10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec215b5190&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_54_1.png" src="../_images/04_seaborn_distributions_54_1.png" />
 </div>
 </div>
+</section>
+</section>
+<section id="empirical-cumulative-distributions">
+<h2>Empirical cumulative distributions<a class="headerlink" href="#empirical-cumulative-distributions" title="Permalink to this headline">#</a></h2>
+<p>A third option for visualizing distributions computes the “empirical cumulative distribution function” (ECDF). This plot draws a monotonically-increasing curve through each datapoint such that the height of the curve reflects the proportion of observations with a smaller value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;ecdf&quot;</span><span class="p">)</span>
@@ -804,7 +1006,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e294661650&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec2012e9d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_56_1.png" src="../_images/04_seaborn_distributions_56_1.png" />
@@ -817,12 +1019,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29bbd7150&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec22b30d50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_58_1.png" src="../_images/04_seaborn_distributions_58_1.png" />
 </div>
 </div>
+</section>
+<section id="visualizing-bivariate-distributions">
+<h2>Visualizing bivariate distributions<a class="headerlink" href="#visualizing-bivariate-distributions" title="Permalink to this headline">#</a></h2>
+<p>All of the examples so far have considered <em>univariate</em> distributions: distributions of a single variable, perhaps conditional on a second variable assigned to <code class="docutils literal notranslate"><span class="pre">hue</span></code>. Assigning a second variable to <code class="docutils literal notranslate"><span class="pre">y</span></code>, however, will plot a <em>bivariate</em> distribution:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bill_depth_mm&quot;</span><span class="p">)</span>
@@ -830,7 +1036,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29bc56790&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec22bb6610&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_61_1.png" src="../_images/04_seaborn_distributions_61_1.png" />
@@ -843,7 +1049,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29bc68410&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec22e28b50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_63_1.png" src="../_images/04_seaborn_distributions_63_1.png" />
@@ -856,7 +1062,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e2990224d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec217eabd0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_65_1.png" src="../_images/04_seaborn_distributions_65_1.png" />
@@ -869,7 +1075,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e299022610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec22b94c90&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_67_1.png" src="../_images/04_seaborn_distributions_67_1.png" />
@@ -882,7 +1088,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29a7a1a10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec22edcf10&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_69_1.png" src="../_images/04_seaborn_distributions_69_1.png" />
@@ -895,7 +1101,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29bfe7610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec1c793750&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_71_1.png" src="../_images/04_seaborn_distributions_71_1.png" />
@@ -908,7 +1114,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29c345d50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec230a4f10&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_73_1.png" src="../_images/04_seaborn_distributions_73_1.png" />
@@ -921,7 +1127,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29c2eb590&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec23460b50&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_75_1.png" src="../_images/04_seaborn_distributions_75_1.png" />
@@ -934,7 +1140,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29c014290&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec231d4390&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_77_1.png" src="../_images/04_seaborn_distributions_77_1.png" />
@@ -947,12 +1153,19 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e296972b10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec231d5090&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_79_1.png" src="../_images/04_seaborn_distributions_79_1.png" />
 </div>
 </div>
+</section>
+<section id="distribution-visualization-in-other-settings">
+<h2>Distribution visualization in other settings<a class="headerlink" href="#distribution-visualization-in-other-settings" title="Permalink to this headline">#</a></h2>
+<p>Several other figure-level plotting functions in seaborn make use of the :func:<code class="docutils literal notranslate"><span class="pre">histplot</span></code> and :func:<code class="docutils literal notranslate"><span class="pre">kdeplot</span></code> functions.</p>
+<section id="plotting-joint-and-marginal-distributions">
+<h3>Plotting joint and marginal distributions<a class="headerlink" href="#plotting-joint-and-marginal-distributions" title="Permalink to this headline">#</a></h3>
+<p>The first is :func:<code class="docutils literal notranslate"><span class="pre">jointplot</span></code>, which augments a bivariate relatonal or distribution plot with the marginal distributions of the two variables. By default, :func:<code class="docutils literal notranslate"><span class="pre">jointplot</span></code> represents the bivariate distribution using :func:<code class="docutils literal notranslate"><span class="pre">scatterplot</span></code> and the marginal distributions using :func:<code class="docutils literal notranslate"><span class="pre">histplot</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bill_depth_mm&quot;</span><span class="p">)</span>
@@ -960,7 +1173,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1e29c089cd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1ec24c31950&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_81_1.png" src="../_images/04_seaborn_distributions_81_1.png" />
@@ -977,7 +1190,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1e29db61f90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1ec234eb1d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_83_1.png" src="../_images/04_seaborn_distributions_83_1.png" />
@@ -992,7 +1205,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1e29eca0c90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1ec235ca610&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_85_1.png" src="../_images/04_seaborn_distributions_85_1.png" />
@@ -1008,12 +1221,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e29f375d50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ec26203650&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_87_1.png" src="../_images/04_seaborn_distributions_87_1.png" />
 </div>
 </div>
+<p>And the axes-level :func:<code class="docutils literal notranslate"><span class="pre">rugplot</span></code> function can be used to add rugs on the side of any other kind of plot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;bill_length_mm&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;bill_depth_mm&quot;</span><span class="p">)</span>
@@ -1028,6 +1242,10 @@ title="Print to PDF"
 <img alt="../_images/04_seaborn_distributions_89_1.png" src="../_images/04_seaborn_distributions_89_1.png" />
 </div>
 </div>
+</section>
+<section id="plotting-many-distributions">
+<h3>Plotting many distributions<a class="headerlink" href="#plotting-many-distributions" title="Permalink to this headline">#</a></h3>
+<p>The :func:<code class="docutils literal notranslate"><span class="pre">pairplot</span></code> function offers a similar blend of joint and marginal distributions. Rather than focusing on a single relationship, however, :func:<code class="docutils literal notranslate"><span class="pre">pairplot</span></code> uses a “small-multiple” approach to visualize the univariate distribution of all variables in a dataset along with all of their pairwise relationships:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span>
@@ -1035,12 +1253,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1e29f3aeb90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1ec262cd4d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_91_1.png" src="../_images/04_seaborn_distributions_91_1.png" />
 </div>
 </div>
+<p>As with :func:<code class="docutils literal notranslate"><span class="pre">jointplot</span></code>/:class:<code class="docutils literal notranslate"><span class="pre">JointGrid</span></code>, using the underlying :class:<code class="docutils literal notranslate"><span class="pre">PairGrid</span></code> directly will afford more flexibility with only a bit more typing:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">PairGrid</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span>
@@ -1051,7 +1270,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1e2a02de3d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1ec27494ad0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_seaborn_distributions_93_1.png" src="../_images/04_seaborn_distributions_93_1.png" />
@@ -1067,7 +1286,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2023-01-05T14:40:15.541602+01:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2023-01-11T14:57:01.316394+01:00
 
 Python implementation: CPython
 Python version       : 3.11.0
@@ -1093,6 +1312,8 @@ plotly    : 5.11.0
 </div>
 </div>
 </div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
