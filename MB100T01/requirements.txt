@@ -1,0 +1,12 @@
+pandas
+seaborn
+numpy
+matplotlib
+plotly
+scipy
+statsmodels
+statannotations
+watermark
+altair
+bokeh
+vega_datasets
