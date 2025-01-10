@@ -113,7 +113,7 @@ dashboard = pn.Column(
 )
 
 # Save the dashboard as an HTML file
-dashboard.save("uct_community_dashboard.html")
+dashboard.save("uct_community_dashboard.html", embed=True)
 
 # Show the dashboard (Optional)
 #dashboard.show()
