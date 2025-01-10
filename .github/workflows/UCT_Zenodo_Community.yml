@@ -24,7 +24,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install panel hvplot pandas requests
+        pip install panel hvplot pandas requests bokeh
 
     # Step 4: Generate the Dashboard
     - name: Generate Dashboard
