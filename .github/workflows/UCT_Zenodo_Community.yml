@@ -35,7 +35,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        mv uct_community_dashboard.html uct_community_dashboard.html  # Optional: Rename the file
-        git add uct_community_dashboard.html
+        mv uct_community_dashboard.html uct_community.html  # Optional: Rename the file
+        git add uct_community.html
         git commit -m "Update dashboard [skip ci]"
         git push origin main
