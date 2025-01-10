@@ -28,12 +28,15 @@ jobs:
 
     # Step 4: Generate the Dashboard
     - name: Generate Dashboard
-      run: python scripts/generate_dashboard.py
+      run: |
+        mkdir -p dashboard  # Create the subfolder if it doesn't exist
+        python scripts/generate_dashboard.py
+        mv uct_community_dashboard.html dashboard/  # Move the HTML file to the dashboard subfolder
 
     # Step 5: Deploy to gh-pages
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Root directory containing uct_community_dashboard.html
+        publish_dir: dashboard  # Publish only the dashboard folder
         publish_branch: gh-pages
