@@ -33,14 +33,17 @@ jobs:
     - name: Generate Dashboard
       run: python scripts/generate_dashboard.py
 
-    # Step 5: Add the generated file to the branch
+    # Step 5: Commit and Push Changes
     - name: Commit and Push Changes
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        cp uct_community_dashboard.html ./  # Ensure the file is in the root directory
         git add uct_community_dashboard.html
-        git commit -m "Update dashboard: $(date +'%Y-%m-%d')"
-        git push
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Update dashboard: $(date +'%Y-%m-%d')"
+          git push
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
