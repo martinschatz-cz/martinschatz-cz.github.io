@@ -6,13 +6,15 @@ on:
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
-  generate-and-publish:
+  generate-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     # Step 1: Checkout the repository
     - name: Checkout Repository
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Ensure full history for branch manipulation
 
     # Step 2: Set up Python
     - name: Set up Python
@@ -30,12 +32,17 @@ jobs:
     - name: Generate Dashboard
       run: python scripts/generate_dashboard.py
 
-    # Step 5: Commit and Push HTML to the Main Branch
-    - name: Commit and Push Dashboard
+    # Step 5: Copy Files to Temporary Directory
+    - name: Prepare gh-pages Content
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        mv uct_community_dashboard.html uct_community.html  # Optional: Rename the file
-        git add uct_community.html
-        git commit -m "Update dashboard [skip ci]"
-        git push origin main
+        mkdir -p gh-pages
+        cp -r * gh-pages/
+        mv uct_community_dashboard.html gh-pages/
+
+    # Step 6: Deploy to gh-pages
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: gh-pages  # Deploy the prepared directory
+        publish_branch: gh-pages
