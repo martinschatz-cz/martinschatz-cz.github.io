@@ -35,14 +35,14 @@ jobs:
     # Step 5: Copy Files to Temporary Directory
     - name: Prepare gh-pages Content
       run: |
-        mkdir -p gh-pages
-        cp -r * gh-pages/
-        mv uct_community_dashboard.html gh-pages/
+        mkdir -p web
+        cp -r * web/
+        mv uct_community_dashboard.html web/
 
     # Step 6: Deploy to gh-pages
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: gh-pages  # Deploy the prepared directory
+        publish_dir: web  # Deploy the prepared directory
         publish_branch: gh-pages
