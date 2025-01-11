@@ -10,17 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
+    # Step 1: Checkout the repository, including the gh-pages branch
     - name: Checkout Repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Ensure full history for branch manipulation
+        fetch-depth: 0  # Fetch the entire history to switch branches
+        ref: gh-pages   # Checkout the gh-pages branch
 
     # Step 2: Set up Python
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9  # Ensure compatibility with your script
+        python-version: 3.9
 
     # Step 3: Install Dependencies
     - name: Install Dependencies
@@ -32,17 +33,14 @@ jobs:
     - name: Generate Dashboard
       run: python scripts/generate_dashboard.py
 
-    # Step 5: Copy Files to Temporary Directory
-    - name: Prepare gh-pages Content
+    # Step 5: Add the generated file to the branch
+    - name: Commit and Push Changes
       run: |
-        mkdir -p web
-        cp -r * web/
-        mv uct_community_dashboard.html web/
-
-    # Step 6: Deploy to gh-pages
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: web  # Deploy the prepared directory
-        publish_branch: gh-pages
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        cp uct_community_dashboard.html ./  # Ensure the file is in the root directory
+        git add uct_community_dashboard.html
+        git commit -m "Update dashboard: $(date +'%Y-%m-%d')"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
