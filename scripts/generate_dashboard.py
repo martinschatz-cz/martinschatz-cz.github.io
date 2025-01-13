@@ -101,8 +101,9 @@ intro_text = pn.pane.HTML(
 # Create a Panel Layout
 dashboard = pn.Column(
     intro_text,
-    pn.Row(repositories_plot, avg_views_plot),
-    pn.Row(avg_downloads_plot, total_views_plot, total_downloads_plot),
+    pn.Row(repositories_plot),
+    pn.Row(total_views_plot, avg_views_plot),
+    pn.Row(total_downloads_plot, avg_downloads_plot),
     pn.Row(cumulative_repos_plot, cumulative_views_plot, cumulative_downloads_plot),
     "### Detailed Tables",
     pn.Tabs(
